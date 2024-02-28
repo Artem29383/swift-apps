@@ -14,6 +14,9 @@
 		BA6C81CD2B8CBBE100C507B8 /* todolistTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6C81CC2B8CBBE100C507B8 /* todolistTests.swift */; };
 		BA6C81D72B8CBBE100C507B8 /* todolistUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6C81D62B8CBBE100C507B8 /* todolistUITests.swift */; };
 		BA6C81D92B8CBBE100C507B8 /* todolistUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6C81D82B8CBBE100C507B8 /* todolistUITestsLaunchTests.swift */; };
+		BA6C81E72B8F59CA00C507B8 /* TodoItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6C81E62B8F59CA00C507B8 /* TodoItemView.swift */; };
+		BA6C81E92B8F5A8E00C507B8 /* CheckboxToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6C81E82B8F5A8E00C507B8 /* CheckboxToggle.swift */; };
+		BA6C81EC2B8F5ADB00C507B8 /* TodoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6C81EB2B8F5ADB00C507B8 /* TodoViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,9 @@
 		BA6C81D22B8CBBE100C507B8 /* todolistUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = todolistUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA6C81D62B8CBBE100C507B8 /* todolistUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = todolistUITests.swift; sourceTree = "<group>"; };
 		BA6C81D82B8CBBE100C507B8 /* todolistUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = todolistUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		BA6C81E62B8F59CA00C507B8 /* TodoItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoItemView.swift; sourceTree = "<group>"; };
+		BA6C81E82B8F5A8E00C507B8 /* CheckboxToggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckboxToggle.swift; sourceTree = "<group>"; };
+		BA6C81EB2B8F5ADB00C507B8 /* TodoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +100,8 @@
 		BA6C81BA2B8CBBDF00C507B8 /* todolist */ = {
 			isa = PBXGroup;
 			children = (
+				BA6C81EA2B8F5ACC00C507B8 /* ViewModels */,
+				BA6C81E52B8F59AD00C507B8 /* Views */,
 				BA6C81BB2B8CBBDF00C507B8 /* todolistApp.swift */,
 				BA6C81BD2B8CBBDF00C507B8 /* ContentView.swift */,
 				BA6C81BF2B8CBBE100C507B8 /* Assets.xcassets */,
@@ -125,6 +133,23 @@
 				BA6C81D82B8CBBE100C507B8 /* todolistUITestsLaunchTests.swift */,
 			);
 			path = todolistUITests;
+			sourceTree = "<group>";
+		};
+		BA6C81E52B8F59AD00C507B8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BA6C81E62B8F59CA00C507B8 /* TodoItemView.swift */,
+				BA6C81E82B8F5A8E00C507B8 /* CheckboxToggle.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BA6C81EA2B8F5ACC00C507B8 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				BA6C81EB2B8F5ADB00C507B8 /* TodoViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,8 +282,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA6C81E92B8F5A8E00C507B8 /* CheckboxToggle.swift in Sources */,
 				BA6C81BE2B8CBBDF00C507B8 /* ContentView.swift in Sources */,
 				BA6C81BC2B8CBBDF00C507B8 /* todolistApp.swift in Sources */,
+				BA6C81EC2B8F5ADB00C507B8 /* TodoViewModel.swift in Sources */,
+				BA6C81E72B8F59CA00C507B8 /* TodoItemView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
