@@ -11,7 +11,9 @@ import SwiftUI
 struct todolistApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            GuessFlagsView()
+//            TipContentView()
+//            ContentView()
         }
     }
 }
