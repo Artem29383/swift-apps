@@ -11,7 +11,13 @@ import SwiftUI
 struct todolistApp: App {
     var body: some Scene {
         WindowGroup {
-            GuessFlagsView()
+            ThingsViewTest()
+//            MyCostsViewLesson()
+//            MyCostsView()
+//            UserDefaultsLessonView()
+//            NavigationViewLesson()
+//            ObservedViewLesson()
+//            GuessFlagsView()
 //            TipContentView()
 //            ContentView()
         }

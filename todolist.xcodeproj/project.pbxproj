@@ -19,6 +19,14 @@
 		BA6C81EC2B8F5ADB00C507B8 /* TodoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6C81EB2B8F5ADB00C507B8 /* TodoViewModel.swift */; };
 		BA6C81EF2B8F8CF600C507B8 /* TipContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6C81EE2B8F8CF600C507B8 /* TipContentView.swift */; };
 		BA6C81F22B90A50C00C507B8 /* GuessFlagsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6C81F12B90A50C00C507B8 /* GuessFlagsView.swift */; };
+		BA6C81F52B93269F00C507B8 /* ObservedViewLesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6C81F42B93269F00C507B8 /* ObservedViewLesson.swift */; };
+		BA6C81F72B9328F400C507B8 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6C81F62B9328F400C507B8 /* UserSettings.swift */; };
+		BA6C81FA2B932ADF00C507B8 /* NavigationViewLesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6C81F92B932ADF00C507B8 /* NavigationViewLesson.swift */; };
+		BA6C81FD2B93311C00C507B8 /* UserDefaultsLessonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6C81FC2B93311C00C507B8 /* UserDefaultsLessonView.swift */; };
+		BA6C82002B9337E700C507B8 /* MyCostsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6C81FF2B9337E700C507B8 /* MyCostsView.swift */; };
+		BA6C82032B93472A00C507B8 /* MyCostsViewLesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6C82022B93472A00C507B8 /* MyCostsViewLesson.swift */; };
+		BA6C82072B934A6A00C507B8 /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6C82062B934A6A00C507B8 /* AddView.swift */; };
+		BA6C82092B97286F00C507B8 /* ThingsViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6C82082B97286F00C507B8 /* ThingsViewTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +62,14 @@
 		BA6C81EB2B8F5ADB00C507B8 /* TodoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoViewModel.swift; sourceTree = "<group>"; };
 		BA6C81EE2B8F8CF600C507B8 /* TipContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipContentView.swift; sourceTree = "<group>"; };
 		BA6C81F12B90A50C00C507B8 /* GuessFlagsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessFlagsView.swift; sourceTree = "<group>"; };
+		BA6C81F42B93269F00C507B8 /* ObservedViewLesson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservedViewLesson.swift; sourceTree = "<group>"; };
+		BA6C81F62B9328F400C507B8 /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
+		BA6C81F92B932ADF00C507B8 /* NavigationViewLesson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewLesson.swift; sourceTree = "<group>"; };
+		BA6C81FC2B93311C00C507B8 /* UserDefaultsLessonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsLessonView.swift; sourceTree = "<group>"; };
+		BA6C81FF2B9337E700C507B8 /* MyCostsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCostsView.swift; sourceTree = "<group>"; };
+		BA6C82022B93472A00C507B8 /* MyCostsViewLesson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCostsViewLesson.swift; sourceTree = "<group>"; };
+		BA6C82062B934A6A00C507B8 /* AddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
+		BA6C82082B97286F00C507B8 /* ThingsViewTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThingsViewTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +120,10 @@
 		BA6C81BA2B8CBBDF00C507B8 /* todolist */ = {
 			isa = PBXGroup;
 			children = (
+				BA6C81FE2B9337C700C507B8 /* MyCosts */,
+				BA6C81FB2B93310700C507B8 /* userDefaultsLesson */,
+				BA6C81F82B932ACE00C507B8 /* navigationLesson */,
+				BA6C81F32B93267700C507B8 /* observedViewLesson */,
 				BA6C81F02B90A4F100C507B8 /* guessFlags */,
 				BA6C81ED2B8F8CE200C507B8 /* tipCalculator */,
 				BA6C81EA2B8F5ACC00C507B8 /* ViewModels */,
@@ -146,6 +166,7 @@
 			children = (
 				BA6C81E62B8F59CA00C507B8 /* TodoItemView.swift */,
 				BA6C81E82B8F5A8E00C507B8 /* CheckboxToggle.swift */,
+				BA6C82082B97286F00C507B8 /* ThingsViewTest.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -172,6 +193,49 @@
 				BA6C81F12B90A50C00C507B8 /* GuessFlagsView.swift */,
 			);
 			path = guessFlags;
+			sourceTree = "<group>";
+		};
+		BA6C81F32B93267700C507B8 /* observedViewLesson */ = {
+			isa = PBXGroup;
+			children = (
+				BA6C81F42B93269F00C507B8 /* ObservedViewLesson.swift */,
+				BA6C81F62B9328F400C507B8 /* UserSettings.swift */,
+			);
+			path = observedViewLesson;
+			sourceTree = "<group>";
+		};
+		BA6C81F82B932ACE00C507B8 /* navigationLesson */ = {
+			isa = PBXGroup;
+			children = (
+				BA6C81F92B932ADF00C507B8 /* NavigationViewLesson.swift */,
+			);
+			path = navigationLesson;
+			sourceTree = "<group>";
+		};
+		BA6C81FB2B93310700C507B8 /* userDefaultsLesson */ = {
+			isa = PBXGroup;
+			children = (
+				BA6C81FC2B93311C00C507B8 /* UserDefaultsLessonView.swift */,
+			);
+			path = userDefaultsLesson;
+			sourceTree = "<group>";
+		};
+		BA6C81FE2B9337C700C507B8 /* MyCosts */ = {
+			isa = PBXGroup;
+			children = (
+				BA6C82042B934A5400C507B8 /* Lesson */,
+				BA6C81FF2B9337E700C507B8 /* MyCostsView.swift */,
+			);
+			path = MyCosts;
+			sourceTree = "<group>";
+		};
+		BA6C82042B934A5400C507B8 /* Lesson */ = {
+			isa = PBXGroup;
+			children = (
+				BA6C82022B93472A00C507B8 /* MyCostsViewLesson.swift */,
+				BA6C82062B934A6A00C507B8 /* AddView.swift */,
+			);
+			path = Lesson;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -304,12 +368,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA6C82072B934A6A00C507B8 /* AddView.swift in Sources */,
 				BA6C81E92B8F5A8E00C507B8 /* CheckboxToggle.swift in Sources */,
+				BA6C82092B97286F00C507B8 /* ThingsViewTest.swift in Sources */,
 				BA6C81BE2B8CBBDF00C507B8 /* ContentView.swift in Sources */,
+				BA6C81FA2B932ADF00C507B8 /* NavigationViewLesson.swift in Sources */,
 				BA6C81F22B90A50C00C507B8 /* GuessFlagsView.swift in Sources */,
 				BA6C81BC2B8CBBDF00C507B8 /* todolistApp.swift in Sources */,
+				BA6C82002B9337E700C507B8 /* MyCostsView.swift in Sources */,
+				BA6C81F72B9328F400C507B8 /* UserSettings.swift in Sources */,
+				BA6C81F52B93269F00C507B8 /* ObservedViewLesson.swift in Sources */,
 				BA6C81EC2B8F5ADB00C507B8 /* TodoViewModel.swift in Sources */,
 				BA6C81EF2B8F8CF600C507B8 /* TipContentView.swift in Sources */,
+				BA6C81FD2B93311C00C507B8 /* UserDefaultsLessonView.swift in Sources */,
+				BA6C82032B93472A00C507B8 /* MyCostsViewLesson.swift in Sources */,
 				BA6C81E72B8F59CA00C507B8 /* TodoItemView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

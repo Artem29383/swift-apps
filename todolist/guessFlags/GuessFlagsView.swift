@@ -19,6 +19,21 @@ import SwiftUI
 //    return randomNumbers
 //}
 
+struct customTextModifier: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+        .font(.title2)
+        .fontWeight(.bold)
+        .foregroundColor(Color.white)
+    }
+}
+
+extension View {
+    func customTextM() -> some View {
+        self.modifier(customTextModifier())
+    }
+}
+
 struct GuessFlagsView: View {
     @State private var images = ["argentina", "bangladesh", "brazil", "canada", "germany", "greece", "russia", "sweden", "uk", "usa"].shuffled()
     
@@ -35,9 +50,7 @@ struct GuessFlagsView: View {
         VStack {
             Section {
                 Text("Выберите флаг: \(images[correctAnswer])")
-                    .font(.title2)
-                    .fontWeight(.bold)
-                    .foregroundColor(Color.white)
+                    .customTextM()
             }.padding(.top, 70)
             Section {
                 VStack {
@@ -58,9 +71,7 @@ struct GuessFlagsView: View {
                 }
                 .padding(.top, 50)
                 Text("Ваш счёт: \(result)")
-                    .font(.title2)
-                    .fontWeight(.bold)
-                    .foregroundColor(Color.white)
+                    .customTextM()
             }
             Spacer()
         }
