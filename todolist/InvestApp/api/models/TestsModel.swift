@@ -10,22 +10,43 @@ import Foundation
 struct Answer: Codable {
     var id: Int
     var text: String
-    var is_right: Bool
+    var isRight: Bool
+    
+    enum CodingKeys: String, CodingKey {
+        case id
+        case text
+        case isRight = "is_right"
+    }
 }
 
 struct Question: Codable {
     var id: Int
     var title: String
-    var question_type: String
+    var questionType: String
     var answer: Int
     var answers: Array<Answer>
+    
+    enum _CodingKeys: String, CodingKey {
+        case id
+        case title
+        case questionType = "question_type"
+        case answer
+        case answers
+    }
 }
 
 struct TestModel: Codable {
     var id: Int
-    var created_at: String
+    var createdAt: String
     var title: String
     var questions: Array<Question>
+    
+    enum __CodingKeys: String, CodingKey {
+        case id
+        case createdAt = "created_at"
+        case title
+        case questions
+    }
 }
 
 

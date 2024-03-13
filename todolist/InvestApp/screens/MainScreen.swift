@@ -14,7 +14,7 @@ import SwiftUI
 
 struct MainScreen: View {
     @State private var isCreateTestSheetOpen = false
-    let isAdmin = UserClass.shared.response?.is_admin ?? false
+    let isAdmin = UserClass.shared.response?.isAdmin ?? false
     @ObservedObject var testClass = TestClass.shared
     
     

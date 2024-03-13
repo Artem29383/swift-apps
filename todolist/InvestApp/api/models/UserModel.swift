@@ -11,5 +11,11 @@ import Foundation
 struct UserModel: Codable {
     var id: Int
     var username: String
-    var is_admin: Bool
+    var isAdmin: Bool
+    
+    enum CodingKeys: String, CodingKey {
+        case id
+        case username
+        case isAdmin = "is_admin"
+    }
 }
