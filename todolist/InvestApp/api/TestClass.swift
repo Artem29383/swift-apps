@@ -24,6 +24,45 @@ class TestClass: ObservableObject {
         }
         return nil
     }
+    
+    func updateTestInfo(id: Int, title: String, completion: @escaping (TestModel?) -> Void) {
+        let body = TestTitle(title: title)
+        do {
+            let jsonData = try JSONEncoder().encode(body)
+            print("Отправка запроса на обновление теста...")
+            if let url = URL(string: "\(Handlers.API_SNP)tests/\(id)") {
+                Handlers.patchRequest(url: url, scopeKey: Handlers.scope, body: jsonData) { result in
+                    switch result {
+                    case .success(let data):
+                        do {
+                            let decodedData = try JSONDecoder().decode(TestModel.self, from: data)
+                            DispatchQueue.main.async { [self] in
+                                if let list = tests?.tests {
+                                    if let itemIndex = list.firstIndex(where: { test in
+                                        test.id == id
+                                    }) {
+                                        tests?.tests[itemIndex] = decodedData
+                                    }
+                                }
+//                                tests?.tests.insert(decodedData, at: 0)
+                                completion(decodedData)
+                            }
+                        } catch {
+                            print("Error decoding JSON: \(error)")
+                            completion(nil)
+                        }
+                    case .failure(let error):
+                        print("Error: \(error)")
+                        completion(nil)
+                    }
+                }
+            } else {
+                completion(nil)
+            }
+        } catch {
+            print("Error encoding TestTitle:", error)
+        }
+    }
 
     func removeTest(id: Int, completion: ((TestModel?) -> Void)? = nil) {
         if let url = URL(string: "\(Handlers.API_SNP)tests/\(id)") {

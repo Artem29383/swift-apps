@@ -73,6 +73,29 @@ class Handlers {
         task.resume()
     }
     
+    static func patchRequest(url: URL, scopeKey: String?, body: Data?, completion: @escaping (Result<Data, Error>) -> Void) {
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = "PATCH"
+        
+        if let scopeKey = scopeKey {
+            request.addValue(scopeKey, forHTTPHeaderField: "scope-key")
+        }
+        
+        request.httpBody = body
+        
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.addValue("application/json", forHTTPHeaderField: "Accept")
+                
+        let task = session.dataTask(with: request) { data, response, error in
+            handleResponse(data: data, response: response, error: error) { result in
+                completion(result)
+            }
+        }
+        
+        task.resume()
+    }
+    
     static func postRequest(url: URL, scopeKey: String?, body: Data?, completion: @escaping (Result<Data, Error>) -> Void) {
         
         var request = URLRequest(url: url)

@@ -9,11 +9,17 @@ import SwiftUI
 
 struct QuestionsEdit: View {
     var id: Int
-    @State private var test: TestModel
+    @State private var isOpenEditedTestAlert: Bool = false
+    @ObservedObject var testClass = TestClass.shared
+    @State private var title: String = ""
+    
+    private var test: TestModel {
+        return testClass.getTestById(id: id)!
+    }
     
     init(id: Int) {
         self.id = id
-        self._test = State(initialValue: TestClass.shared.getTestById(id: id)!)
+        _title = State(initialValue: test.title)
     }
     
     var body: some View {
@@ -25,13 +31,26 @@ struct QuestionsEdit: View {
             
             .navigationTitle(test.title)
             .navigationBarTitleDisplayMode(.inline)
-            .navigationBarItems(trailing: Button(action: {
+            .navigationBarItems(leading: Button(action: {
+                isOpenEditedTestAlert.toggle()
+            }) {
+                Image(systemName: "pencil")
+            }, trailing: Button(action: {
                 TestClass.shared.removeTest(id: id)
             }) {
                 Image(systemName: "trash")
             }
                 .foregroundColor(.red)
             )
+        }
+        .alert("Редактирование", isPresented: $isOpenEditedTestAlert) {
+            TextField("Название теста", text: $title)
+            Button("Применить", role: .cancel) {
+                TestClass.shared.updateTestInfo(id: id, title: title) { data in
+//                    title = ""
+                }
+            }
+            Button("Отмена", role: .destructive) { }
         }
     }
 }
